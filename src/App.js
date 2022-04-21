@@ -9,6 +9,7 @@ const Title = 'The Orc Horde'
 const supply = 10000
 
 document.title = Title
+document.getElementById('favicon').setAttribute('href', image)
 
 function App() {
     const [opacity, setOpacity] = useState(0)
