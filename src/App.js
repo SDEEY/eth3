@@ -4,9 +4,9 @@ import imgDiscord from './icons8-discord-50.png'
 import imgTwitter from './icons8-twitter-50.png'
 
 const ethAmount = '0'
-const image = 'https://pbs.twimg.com/profile_images/1629735332232003585/QnNfyRtw_400x400.jpg'
-const Title = 'Tomogakuen'
-const supply = 7777
+const image = 'https://pbs.twimg.com/profile_images/1585740266828230656/YM80lIii_400x400.jpg'
+const Title = 'LEGENDARY: HEROES UNCHAINED'
+const supply = 1371
 
 document.title = Title
 document.getElementById('favicon').setAttribute('href', image)
