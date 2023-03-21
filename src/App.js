@@ -3,10 +3,10 @@ import {useEffect, useState} from "react";
 import imgDiscord from './icons8-discord-50.png'
 import imgTwitter from './icons8-twitter-50.png'
 
-const ethAmount = '0'
-const image = 'https://pbs.twimg.com/profile_images/1585740266828230656/YM80lIii_400x400.jpg'
-const Title = 'LEGENDARY: HEROES UNCHAINED'
-const supply = 1371
+const ethAmount = '0.04 / 0.05 / 0.06'
+const image = 'https://mobile.twitter.com/campcosmos/photo'
+const Title = 'Camp Cosmos'
+const supply = 8888
 
 document.title = Title
 document.getElementById('favicon').setAttribute('href', image)
