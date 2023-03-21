@@ -4,7 +4,7 @@ import imgDiscord from './icons8-discord-50.png'
 import imgTwitter from './icons8-twitter-50.png'
 
 const ethAmount = '0.04 / 0.05 / 0.06'
-const image = 'https://mobile.twitter.com/campcosmos/photo'
+const image = 'https://media.discordapp.net/attachments/941092604563558464/1081619215200571512/fdsfhghnbfdsf.jpg?width=1170&height=1170'
 const Title = 'Camp Cosmos'
 const supply = 8888
 
