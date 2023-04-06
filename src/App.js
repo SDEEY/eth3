@@ -4,7 +4,7 @@ import imgDiscord from './icons8-discord-50.png'
 import imgTwitter from './icons8-twitter-50.png'
 
 const ethAmount = '0.1 / 0.12'
-const image = 'https://pbs.twimg.com/profile_images/1602600156553433088/fXXG3DHc_400x400.jpg'
+const image = 'https://pbs.twimg.com/profile_images/1635884145254735872/U9OBjHpW_400x400.png'
 const Title = 'Delabs Games'
 const supply = 3433
 
