@@ -6,7 +6,7 @@ import imgTwitter from './icons8-twitter-50.png'
 const ethAmount = '0.0079 / 0.0099'
 const image = 'https://pbs.twimg.com/profile_images/1630965058615246848/vFFYp1JQ_400x400.jpg'
 const Title = 'The Sicky'
-const supply = 788
+const supply = 100
 
 document.title = Title
 document.getElementById('favicon').setAttribute('href', image)
