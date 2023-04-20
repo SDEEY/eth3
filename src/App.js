@@ -4,7 +4,7 @@ import imgDiscord from './icons8-discord-50.png'
 import imgTwitter from './icons8-twitter-50.png'
 
 const ethAmount = '0.04'
-const image = 'https://pbs.twimg.com/profile_images/1620846625550630923/ZQbwEtkd_400x400.jpg'
+const image = 'https://cdn.bio.link/uploads/profile_pictures/2023-01-24/dj4qhMboSyKKZo1Czi5unNucpBippDQi.png'
 const Title = 'WolfPunX'
 const supply = 1000
 
