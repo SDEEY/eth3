@@ -6,7 +6,7 @@ import imgTwitter from './icons8-twitter-50.png'
 const ethAmount = '0.04'
 const image = 'https://cdn.bio.link/uploads/profile_pictures/2023-01-24/dj4qhMboSyKKZo1Czi5unNucpBippDQi.png'
 const Title = 'WolfPunX'
-const supply = 1000
+const supply = 500
 
 document.title = Title
 document.getElementById('favicon').setAttribute('href', image)
