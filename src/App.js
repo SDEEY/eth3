@@ -6,7 +6,7 @@ import imgTwitter from './icons8-twitter-50.png'
 const ethAmount = '0.15'
 const image = 'https://pbs.twimg.com/profile_images/1643928366985232384/-JjhKAFC_400x400.jpg'
 const Title = 'DarkadeNFT'
-const supply = 333
+const supply = 31
 
 document.title = Title
 document.getElementById('favicon').setAttribute('href', image)
