@@ -3,10 +3,10 @@ import {useEffect, useState} from "react";
 import imgDiscord from './icons8-discord-50.png'
 import imgTwitter from './icons8-twitter-50.png'
 
-const ethAmount = '0.01'
-const image = 'https://images-ext-1.discordapp.net/external/9djCsa_LhAHMq1ieM7XSZOOZEp4PUfrn4yQ9R9eC2jg/%3Fw%3D500%26auto%3Dformat/https/i.seadn.io/gcs/files/ea4ce2dda2ab6561179f6c146cb82163.png?width=600&height=402'
-const Title = 'THE WORKING DEAD'
-const supply = 6121
+const ethAmount = '0.07'
+const image = 'https://pbs.twimg.com/profile_images/1660058371314053120/kdbdYuo1_400x400.jpg'
+const Title = 'Futures Factory'
+const supply = 5555
 
 document.title = Title
 document.getElementById('favicon').setAttribute('href', image)
