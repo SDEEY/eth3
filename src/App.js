@@ -4,8 +4,8 @@ import imgDiscord from './icons8-discord-50.png'
 import imgTwitter from './icons8-twitter-50.png'
 
 const ethAmount = '0'
-const image = 'https://pbs.twimg.com/profile_images/1673052695752581124/Q-TCtkBw_400x400.jpg'
-const Title = 'NoLaughTime'
+const image = 'https://pbs.twimg.com/profile_images/1671978394378969095/9WDOXn9N_400x400.jpg'
+const Title = 'Boring Doges'
 const supply = 1994
 
 document.title = Title
