@@ -5,7 +5,7 @@ import imgTwitter from './icons8-twitter-50.png'
 
 const ethAmount = '0/0.013'
 const image = 'https://twitter.com/Baby_GhostsNft/photo'
-const Title = 'Baby Ghosts 3D NFT'
+const Title = 'Baby Ghosts NFT'
 const supply = 5500
 
 document.title = Title
