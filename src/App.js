@@ -3,9 +3,9 @@ import {useEffect, useState} from "react";
 import imgDiscord from './icons8-discord-50.png'
 import imgTwitter from './icons8-twitter-50.png'
 
-const ethAmount = '0.05/0.069'
-const image = 'https://pbs.twimg.com/profile_images/1669415912506572819/_X1eyyDU_400x400.jpg'
-const Title = 'Rascals of the Wild'
+const ethAmount = '0.03'
+const image = 'https://pbs.twimg.com/profile_images/1664354912191258628/bBFjEdnS_400x400.jpg'
+const Title = 'DigitalSettlement'
 const supply = 2971
 
 document.title = Title
